@@ -25,12 +25,12 @@
 /* Font Faces */
 @font-face {
     font-family: Nunito;
-    src: url('/fonts/Nunito-Regular.ttf');
+    src: url('/fonts/Nunito/Bold.ttf');
 }
 
 @font-face {
     font-family: Nunito;
-    src: url('/fonts/Nunito-Bold.ttf');
+    src: url('/fonts/Nunito/Black.ttf');
     font-weight: bold;
 }
 
@@ -69,10 +69,19 @@ p {
     text-align: center;
     min-width: 120px;
     border-radius: 1em;
+
+    outline: 2px solid #ffffff00;
+    transition: .2s;
+}
+
+#navbar li a:hover {
+    outline: 2px solid #ffffffff;
+    transition: .2s;
+    outline-offset: 4px;
 }
 
 /* Nav */
-nav li>a {
+nav li a {
     background-color: var(--frame-color);
     padding: .25em 0em;
     text-decoration: none;
@@ -80,9 +89,8 @@ nav li>a {
 
 a {
     color: var(--accent-color);
-    text-shadow: var(--bg-color-light) 1px 1px 2px;
+    transition: .2s;
     font-weight: bold;
-    transition: background-color 250ms ease-out;
     border-radius: 0.25em;
 }
 
@@ -92,7 +100,9 @@ a:visited {
 
 a:hover {
     background-color: var(--accent-color);
+    transition: .2s;
     color: var(--text-color);
+    transition: .2s;
 }
 
 ul {
@@ -113,7 +123,6 @@ ul {
     margin: 1em;
     background: var(--frame-color);
     border: 2px solid var(--text-color);
-    text-shadow: var(--bg-color-light-dark) 1px 1px 2px;
     text-align: center;
 }
 
@@ -132,22 +141,19 @@ main {
     padding: 0em 1em;
     margin: 0.5em;
     border: 2px solid var(--text-color);
-    text-shadow: var(--bg-color-light-dark) 1px 1px 2px;
     width: 1080px;
 }
 
-main>h1,
-main>h2,
-main>h3 {
+main h1,
+main h2,
+main h3 {
     background-color: var(--bg-color-light);
     border-radius: .25em;
     padding: .25em .5em;
-    text-shadow: var(--bg-color-light-dark) 1px 1px 2px;
 }
 
 footer {
     background-color: var(--bg-color-light);
-    text-shadow: var(--bg-color-light-dark) 1px 1px 2px;
     text-align: center;
     border-radius: 0.5em;
     padding: 0.25em;
